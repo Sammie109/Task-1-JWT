@@ -1,5 +1,5 @@
 # Task-1-JWT
-JSON Web Token 
+JSON Web Token
 ---
 **JSON Web token** is a secure and safe way of data (claims) transmitting between two parties. It is performed using the JSON ***object***. Technically it is a non-encrypted string with three parts, separated by dots.
 JWT acts effectively as a temporary user credential that replaces the permanent credential which is the username and password combination.
@@ -14,7 +14,7 @@ JWT consists of 3 parts: header, payload and signature
  ### Header 
  contains information on how to calculate JWT signature (type of the algorithm such as SHA 256 or RSA) and type of the token which is JWT. It is encoded by Base 64 algorithm to be transmitted. Header describes what algorithm (signing JWS or encryption JWE) is used to process the data contained in the JWT. A signature allows a JWT to be validated against modifications. Encryption, on the other hand, makes sure the content of the JWT is only readable by certain parties.
 
-`Example: {"alg": "HS256", "typ": "JWT"}'`
+```diffExample: {"alg": "HS256", "typ": "JWT"}'```
 ***
  ### Payload 
 contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. 
@@ -29,7 +29,7 @@ Attention should be paid to the name of any custom claim: 1) You can use any nam
 
 *Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.*
 
-`Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}`
+```diffExample: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}```
 ***
  ### Signature 
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot `[base64urlEncode(header) + '.' + base64urlEncode(payload]`, then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
