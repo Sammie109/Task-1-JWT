@@ -21,5 +21,6 @@ Payload should not contain any restricted information because it is not encrypte
 Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}
   ### Signature
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot [base64urlEncode(header) + '.' + base64urlEncode(payload], then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
+----
   Now, when all parts are ready, they just need to be concatenated by separating them with a dot.
   In this case user obtains an access token which has an expiration date (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
