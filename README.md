@@ -1,10 +1,10 @@
 # Task-1-JWT
-JSON Web Token
+JSON Web Token 
 ---
-JSON Web token is a secure and safe way of data (claims) transmitting between two parties. It is performed using the JSON object. Technically it is a non-encrypted string with three parts, separated by dots.
+**JSON Web token** is a secure and safe way of data (claims) transmitting between two parties. It is performed using the JSON object. Technically it is a non-encrypted string with three parts, separated by dots.
 JWT acts effectively as a temporary user credential that replaces the permanent credential which is the username and password combination.
 JSON itself is a simple data transmitting format, convenient for reading and writing by both human and computer.
-JSON is based on two main data structures:1) Key:value structure (realized in a form of an object); 2) An ordered list of values (realized in a form of an array)    
+JSON is based on two main data structures:1) Key:value structure (realized in a form of an object); 2) An ordered list of values (realized in a form of an array)
 Object is the unordered set of key:value pairs (e.g. "alg": "HS256", where "alg" is a key and "HS256" is the value)
 JWT consists of 3 parts: header, payload and signature
   •	Header contains information on how to calculate JWT signature (type of the algorithm such as SHA 256 or RSA) and type of the token which is JWT. It is encoded by Base 64 algorithm to be transmitted. Header describes what algorithm (signing JWS or encryption JWE) is used to process the data contained in the JWT. A signature allows a JWT to be validated against modifications. Encryption, on the other hand, makes sure the content of the JWT is only readable by certain parties.
