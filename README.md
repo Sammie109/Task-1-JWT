@@ -46,7 +46,7 @@ userName: "John Smith",
 
 userRole: "Admin" }.
 
-S9Zs/8/uEGGTVVtLggFTizCsMtwOJnRhjaQ2BMUQhcY
+wmhbD8_QA_w54HSPCwcdCBf4weh6yhZ1u_PwHlYHr9Y
 ```
 
 ***Base 64 encoded look of JWT***  
