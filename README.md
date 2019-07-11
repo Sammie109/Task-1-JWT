@@ -35,6 +35,8 @@ Attention should be paid to the name of any custom claim: 1) You can use any nam
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot `[base64urlEncode(header) + '.' + base64urlEncode(payload]`, then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
   ***
   Now, when all parts are ready, they just need to be concatenated by separating them with a dot.
+  
+![JWT](https://user-images.githubusercontent.com/52605746/61045134-e6b3f300-a3e2-11e9-887e-dd3c3cc14f3e.jpg)
 
 ***Basic look of JWT***
 ```
