@@ -16,7 +16,12 @@ JWT consists of 3 parts: header, payload and signature
 
 `Example: {"alg": "HS256", "typ": "JWT"}'`
  ### Payload ###
-contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. There are three types of claims: Reserved (predefined recommended interoperable claims like iss (issuer), exp (expiration time), sub (subject); Public (Custom claims for public consumption which can be defined at a will by those who use JWT. Usually it is name or email); Private (Custom claims created to share information specific to your application and between parties that agree on using them). 
+contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. 
+
+There are three types of claims: 
+1)Reserved (predefined recommended interoperable claims like iss (issuer), exp (expiration time), sub (subject); 
+2)Public (Custom claims for public consumption which can be defined at a will by those who use JWT. Usually it is name or email); 3)Private (Custom claims created to share information specific to your application and between parties that agree on using them). 
+
 Attention should be paid to the name of any custom claim: 1) You can use any name which is not listed in the IANA JSON Web Token Claims Registry; 2) To avoid collision, private claims should not have same names with reserved or public claims.
 Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.
 
@@ -25,4 +30,5 @@ Payload should not contain any restricted information because it is not encrypte
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot [base64urlEncode(header) + '.' + base64urlEncode(payload], then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
   ***
   Now, when all parts are ready, they just need to be concatenated by separating them with a dot.
-  In this case user obtains an access token which has an expiration date (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
+  
+  In this way user obtains an access token which has an expiration time (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
