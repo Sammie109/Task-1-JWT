@@ -19,7 +19,7 @@ contains the information that should be transmitted and is stored inside the JWT
 Attention should be paid to the name of any custom claim: 1) You can use any name which is not listed in the IANA JSON Web Token Claims Registry; 2) To avoid collision, private claims should not have same names with reserved or public claims.
 Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.
 Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}
-  ### Signature
+  ### Signature ###
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot [base64urlEncode(header) + '.' + base64urlEncode(payload], then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
 ----
   Now, when all parts are ready, they just need to be concatenated by separating them with a dot.
