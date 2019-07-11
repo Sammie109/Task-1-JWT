@@ -10,6 +10,7 @@ JSON is based on two main data structures:
 2) An ordered list of values (realized in a form of an array)
 
 ***Object*** is the set of key:value pairs (e.g. "alg": "HS256", where "alg" is a key and "HS256" is the value).
+***
 JWT consists of 3 parts: header, payload and signature
 ***
  ### Header 
