@@ -25,7 +25,8 @@ There are three types of claims:
 3) Private (Custom claims created to share information specific to your application and between parties that agree on using them). 
 
 Attention should be paid to the name of any custom claim: 1) You can use any name which is not listed in the IANA JSON Web Token Claims Registry; 2) To avoid collision, private claims should not have same names with reserved or public claims.
-Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.
+
+*Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.*
 
 `Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}`
  ### Signature ###
