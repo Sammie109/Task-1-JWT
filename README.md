@@ -19,7 +19,8 @@ JWT consists of 3 parts: header, payload and signature
 contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. There are three types of claims: Reserved (predefined recommended interoperable claims like iss (issuer), exp (expiration time), sub (subject); Public (Custom claims for public consumption which can be defined at a will by those who use JWT. Usually it is name or email); Private (Custom claims created to share information specific to your application and between parties that agree on using them). 
 Attention should be paid to the name of any custom claim: 1) You can use any name which is not listed in the IANA JSON Web Token Claims Registry; 2) To avoid collision, private claims should not have same names with reserved or public claims.
 Payload should not contain any restricted information because it is not encrypted, it is only encoded by Base 64 algorithm, so anyone can decode it.
-Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}
+
+`Example: {"userId": "b08f86af-35da-48f2-8fab-cef3904660bd", "username": "Paul"}`
  ### Signature ###
 is used to verify the sender of JWT and to ensure that no information has been deleted or added into JWT. It contains MAC (Message authentication code). Above mentioned Base 64 algorithm encodes header and payload, then they are separated by a dot [base64urlEncode(header) + '.' + base64urlEncode(payload], then this part is hashed by a secret key using the algorithm specified in the header (e.g. "alg": "HS256"). This part can also be encoded by Base 64 algorithm.
   ***
