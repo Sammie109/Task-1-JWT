@@ -60,4 +60,4 @@ wmhbD8_QA_w54HSPCwcdCBf4weh6yhZ1u_PwHlYHr9Y
   
   
   
-  In this way user obtains an access token which has an expiration time (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
+    In this way user obtains an access token which has an expiration time (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
