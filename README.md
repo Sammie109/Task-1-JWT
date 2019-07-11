@@ -2,7 +2,9 @@
 JSON Web Token
 ---
 **JSON Web token** is a secure and safe way of data (claims) transmitting between two parties. It is performed using the JSON ***object***. Technically it is a non-encrypted string with three parts, separated by dots.
-JWT acts effectively as a temporary user credential that replaces the permanent credential which is the username and password combination.JSON itself is a simple data transmitting format, convenient for reading and writing by both human and computer.
+JWT acts effectively as a temporary user credential that replaces the permanent credential which is the username and password combination.
+
+JSON itself is a simple data transmitting format, convenient for reading and writing by both human and computer.
 
 JSON is based on two main data structures:
 1) Key:value structure (realized in a form of an ***object***); 
