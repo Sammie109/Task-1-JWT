@@ -11,7 +11,9 @@ JSON is based on two main data structures:
 ***Object*** is the unordered set of key:value pairs (e.g. "alg": "HS256", where "alg" is a key and "HS256" is the value).
 JWT consists of 3 parts: header, payload and signature
 ***
-  	Header ===== contains information on how to calculate JWT signature (type of the algorithm such as SHA 256 or RSA) and type of the token which is JWT. It is encoded by Base 64 algorithm to be transmitted. Header describes what algorithm (signing JWS or encryption JWE) is used to process the data contained in the JWT. A signature allows a JWT to be validated against modifications. Encryption, on the other hand, makes sure the content of the JWT is only readable by certain parties.
+  	Header
+    ===== 
+contains information on how to calculate JWT signature (type of the algorithm such as SHA 256 or RSA) and type of the token which is JWT. It is encoded by Base 64 algorithm to be transmitted. Header describes what algorithm (signing JWS or encryption JWE) is used to process the data contained in the JWT. A signature allows a JWT to be validated against modifications. Encryption, on the other hand, makes sure the content of the JWT is only readable by certain parties.
 Example: {"alg": "HS256", "typ": "JWT"}
   •	Payload contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. There are three types of claims: Reserved (predefined recommended interoperable claims like iss (issuer), exp (expiration time), sub (subject); Public (Custom claims for public consumption which can be defined at a will by those who use JWT. Usually it is name or email); Private (Custom claims created to share information specific to your application and between parties that agree on using them). 
 Attention should be paid to the name of any custom claim: 1) You can use any name which is not listed in the IANA JSON Web Token Claims Registry; 2) To avoid collision, private claims should not have same names with reserved or public claims.
