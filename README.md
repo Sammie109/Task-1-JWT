@@ -54,10 +54,11 @@ wmhbD8_QA_w54HSPCwcdCBf4weh6yhZ1u_PwHlYHr9Y
 ```
 
 ***Base 64 encoded look of JWT***  
- ```eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLm15c2VydmljZS5jb20iLCJhdWQiOiJteXNlcnZpY2UuY29tIiwidXNlck5hbWUiOiJKb2huIFNtaXRoIiwidXNlclJvbGUiOiJBZG1pbiJ9.4rmwo6lIy7SPvRs1tOTqFYEtdRTCG1M_LAEZi13985Y```
+                 
+                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLm15c2VydmljZS5jb20iLCJhdWQiOiJteXNlcnZpY2UuY29tIiwidXNlck5hbWUiOiJKb2huIFNtaXRoIiwidXNlclJvbGUiOiJBZG1pbiJ9.4rmwo6lIy7SPvRs1tOTqFYEtdRTCG1M_LAEZi13985Y
   
   
   
   
   
-    In this way user obtains an access token which has an expiration time (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
+   In this way user obtains an access token which has an expiration time (e.g. 30 min) and after 30 min expire user has to re-authenticate. The main disadvantage of this approach is that in the case of a short expiration period, the user will often have to enter a login and password (which is inconvenient and insecure). In order to solve the described problems, it is often proposed, along with a short-term access token, to additionally use a second long-playing refresh token (e.g. with the 1 year expiration period).
