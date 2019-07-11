@@ -14,7 +14,7 @@ JWT consists of 3 parts: header, payload and signature
  ### Header 
  contains information on how to calculate JWT signature (type of the algorithm such as SHA 256 or RSA) and type of the token which is JWT. It is encoded by Base 64 algorithm to be transmitted. Header describes what algorithm (signing JWS or encryption JWE) is used to process the data contained in the JWT. A signature allows a JWT to be validated against modifications. Encryption, on the other hand, makes sure the content of the JWT is only readable by certain parties.
 
-```diff Example: {"alg": "HS256", "typ": "JWT"}' ```
+```diff +Example: {"alg": "HS256", "typ": "JWT"}' ```
 ***
  ### Payload 
 contains the information that should be transmitted and is stored inside the JWT. Usually it contains claims (statements) about the user. Payload is also formed using the key:value structure and you can put as many claims into payload as you need. 
